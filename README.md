@@ -9,13 +9,14 @@ The objective is to provide actionable business insights that help management op
 The project was developed using SQL, Python (Pandas), and Tableau following a complete Business Analyst project lifecycle including BRD, FRD, data analysis, and dashboard development.
 
 ---
+<img width="1680" height="1050" alt="Screenshot 2026-06-01 at 3 46 14 PM" src="https://github.com/user-attachments/assets/da306876-a6d5-4330-90fd-63fadf375d6f" />
 
 ## Business Problem
 
 Pharmaceutical companies invest heavily in sales representatives and marketing activities to increase physician prescriptions and product sales. However, management often faces challenges in identifying:
 
 * Which regions generate the highest revenue?
-* Which products contribute most to sales?<img width="1680" height="1050" alt="Screenshot 2026-06-01 at 3 46 14 PM" src="https://github.com/user-attachments/assets/da306876-a6d5-4330-90fd-63fadf375d6f" />
+* Which products contribute most to sales?
 [Uploading Dashboard copy.twb…]()
 
 * Which physicians drive prescription growth?
