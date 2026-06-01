@@ -17,8 +17,6 @@ Pharmaceutical companies invest heavily in sales representatives and marketing a
 
 * Which regions generate the highest revenue?
 * Which products contribute most to sales?
-[Uploading Dashboard copy.twb…]()
-
 * Which physicians drive prescription growth?
 * How effective are sales representatives?
 * Is marketing spend generating adequate returns?
