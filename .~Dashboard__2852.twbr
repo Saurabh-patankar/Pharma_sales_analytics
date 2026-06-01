@@ -1,0 +1,2295 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0410.0924                               -->
+<workbook original-version='18.1' source-build='2026.1.1 (20261.26.0410.0924)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <ParameterAction />
+    <ParameterActionClearSelection />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='AxisStart' datatype='integer' name='[AxisStart]' param-domain-type='any' role='measure' type='quantitative' value='1'>
+        <calculation class='tableau' formula='1' />
+      </column>
+    </datasource>
+    <datasource caption='pharma_sales_data' inline='true' name='federated.059jrgn1inh6l81a5facl08hfthw' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='pharma_sales_data' name='textscan.11754fr15ote1x0zual0a0jj3qmf'>
+            <connection class='textscan' directory='/Users/saurabhpatankar/Desktop/pharma-sales-analytics/data' filename='pharma_sales_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.11754fr15ote1x0zual0a0jj3qmf' name='pharma_sales_data.csv' table='[pharma_sales_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='sales_rep_id' ordinal='0' />
+            <column datatype='string' name='sales_rep_name' ordinal='1' />
+            <column datatype='integer' name='doctor_id' ordinal='2' />
+            <column datatype='string' name='doctor_name' ordinal='3' />
+            <column datatype='string' name='specialty' ordinal='4' />
+            <column datatype='string' name='region' ordinal='5' />
+            <column datatype='string' name='medicine_name' ordinal='6' />
+            <column datatype='integer' name='units_sold' ordinal='7' />
+            <column datatype='integer' name='revenue' ordinal='8' />
+            <column datatype='date' name='visit_date' ordinal='9' />
+            <column datatype='integer' name='target' ordinal='10' />
+            <column datatype='real' name='achieved_pct' ordinal='11' />
+            <column datatype='integer' name='marketing_spend' ordinal='12' />
+            <column datatype='integer' name='prescriptions' ordinal='13' />
+            <column datatype='real' name='roi' ordinal='14' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sales_rep_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[sales_rep_id]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>sales_rep_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sales_rep_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sales_rep_name]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>sales_rep_name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>doctor_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[doctor_id]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>doctor_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>doctor_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[doctor_name]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>doctor_name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>specialty</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[specialty]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>specialty</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>medicine_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[medicine_name]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>medicine_name</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>units_sold</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[units_sold]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>units_sold</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>revenue</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[revenue]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>revenue</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>visit_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[visit_date]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>visit_date</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>target</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[target]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>target</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>achieved_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[achieved_pct]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>achieved_pct</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>marketing_spend</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[marketing_spend]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>marketing_spend</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prescriptions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[prescriptions]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>prescriptions</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>roi</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[roi]</local-name>
+            <parent-name>[pharma_sales_data.csv]</parent-name>
+            <remote-alias>roi</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Total Revenue' datatype='integer' name='[Calculation_0195995790295040]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='Sum([revenue])' />
+      </column>
+      <column caption='Total Prescription' datatype='integer' name='[Calculation_0195995791708161]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='sum([prescriptions])' />
+      </column>
+      <column caption='Average Achievement %' datatype='real' name='[Calculation_0195995792908290]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG([achieved_pct])' />
+      </column>
+      <column caption='Average ROI' datatype='real' name='[Calculation_0195995794702339]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([revenue]) / SUM([marketing_spend])' />
+      </column>
+      <column caption='Region Revenue' datatype='real' name='[Calculation_0195995804663812]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([revenue]) / TOTAL(SUM([revenue])) * 100'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='pharma_sales_data.csv' datatype='table' name='[__tableau_internal_object_id__].[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]' role='measure' type='quantitative' />
+      <column caption='Achieved Pct' datatype='real' name='[achieved_pct]' role='measure' type='quantitative' />
+      <column caption='Doctor Id' datatype='integer' name='[doctor_id]' role='dimension' type='ordinal' />
+      <column caption='Doctor Name' datatype='string' name='[doctor_name]' role='dimension' type='nominal' />
+      <column caption='Marketing Spend' datatype='integer' name='[marketing_spend]' role='measure' type='quantitative' />
+      <column caption='Medicine Name' datatype='string' name='[medicine_name]' role='dimension' type='nominal' />
+      <column caption='Prescriptions' datatype='integer' name='[prescriptions]' role='measure' type='quantitative' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <column caption='Revenue' datatype='integer' name='[revenue]' role='measure' type='quantitative' />
+      <column caption='Roi' datatype='real' name='[roi]' role='measure' type='quantitative' />
+      <column caption='Sales Rep Id' datatype='integer' name='[sales_rep_id]' role='dimension' type='ordinal' />
+      <column caption='Sales Rep Name' datatype='string' name='[sales_rep_name]' role='dimension' type='nominal' />
+      <column caption='Specialty' datatype='string' name='[specialty]' role='dimension' type='nominal' />
+      <column caption='Target' datatype='integer' name='[target]' role='measure' type='quantitative' />
+      <column caption='Units Sold' datatype='integer' name='[units_sold]' role='measure' type='quantitative' />
+      <column caption='Visit Date' datatype='date' name='[visit_date]' role='dimension' type='ordinal' />
+      <column-instance column='[medicine_name]' derivation='None' name='[none:medicine_name:nk]' pivot='key' type='nominal' />
+      <group caption='Action (Region)' hidden='true' name='[Action (Region)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[region]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/pc/_gmbnz0169bcz8n0tzsszt3w0000gn/T/tableau-temp/#TableauTemp_0li49dh0ek3tim12i48wf0n8uyo2.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='06/01/2026 07:38:24 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>sales_rep_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[sales_rep_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sales_rep_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sales_rep_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[sales_rep_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sales_rep_name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>doctor_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[doctor_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>doctor_id</remote-alias>
+              <ordinal>2</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>60</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>doctor_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[doctor_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>doctor_name</remote-alias>
+              <ordinal>3</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>60</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>specialty</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[specialty]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>specialty</remote-alias>
+              <ordinal>4</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[region]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>region</remote-alias>
+              <ordinal>5</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>medicine_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[medicine_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>medicine_name</remote-alias>
+              <ordinal>6</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>units_sold</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[units_sold]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>units_sold</remote-alias>
+              <ordinal>7</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>473</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>revenue</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[revenue]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>revenue</remote-alias>
+              <ordinal>8</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1861</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>visit_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[visit_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>visit_date</remote-alias>
+              <ordinal>9</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>371</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>target</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[target]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>target</remote-alias>
+              <ordinal>10</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1931</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>achieved_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[achieved_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>achieved_pct</remote-alias>
+              <ordinal>11</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1684</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>marketing_spend</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[marketing_spend]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>marketing_spend</remote-alias>
+              <ordinal>12</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1590</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>prescriptions</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[prescriptions]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>prescriptions</remote-alias>
+              <ordinal>13</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>96</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>roi</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[roi]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>roi</remote-alias>
+              <ordinal>14</ordinal>
+              <family>pharma_sales_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1117</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' rowDisplayCount='1' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:medicine_name:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;HeartSafe&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;SkinGlow&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;PainOff&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;NeuroPlus&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='pharma_sales_data.csv' id='pharma_sales_data.csv_11BB6A8FF31748309465860D98C07C0E'>
+            <properties context=''>
+              <relation connection='textscan.11754fr15ote1x0zual0a0jj3qmf' name='pharma_sales_data.csv' table='[pharma_sales_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='sales_rep_id' ordinal='0' />
+                  <column datatype='string' name='sales_rep_name' ordinal='1' />
+                  <column datatype='integer' name='doctor_id' ordinal='2' />
+                  <column datatype='string' name='doctor_name' ordinal='3' />
+                  <column datatype='string' name='specialty' ordinal='4' />
+                  <column datatype='string' name='region' ordinal='5' />
+                  <column datatype='string' name='medicine_name' ordinal='6' />
+                  <column datatype='integer' name='units_sold' ordinal='7' />
+                  <column datatype='integer' name='revenue' ordinal='8' />
+                  <column datatype='date' name='visit_date' ordinal='9' />
+                  <column datatype='integer' name='target' ordinal='10' />
+                  <column datatype='real' name='achieved_pct' ordinal='11' />
+                  <column datatype='integer' name='marketing_spend' ordinal='12' />
+                  <column datatype='integer' name='prescriptions' ordinal='13' />
+                  <column datatype='real' name='roi' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.059jrgn1inh6l81a5facl08hfthw'>
+      <datasources>
+        <datasource caption='pharma_sales_data' name='federated.059jrgn1inh6l81a5facl08hfthw' />
+      </datasources>
+      <datasource-dependencies datasource='federated.059jrgn1inh6l81a5facl08hfthw'>
+        <column caption='Medicine Name' datatype='string' name='[medicine_name]' role='dimension' type='nominal' />
+        <column-instance column='[medicine_name]' derivation='None' name='[none:medicine_name:nk]' pivot='key' type='nominal' />
+        <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+        <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]'>
+        <groupfilter function='level-members' level='[none:medicine_name:nk]' />
+      </filter>
+      <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]'>
+        <groupfilter function='level-members' level='[none:region:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action2_06AAF77927284213BF4CB2F6C629AAC8]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Revenue By Region' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <edit-parameter-action caption='Parameter1' name='[Action1_A646D169C5D144F9BF7B789EE575DE72]'>
+      <activation type='on-select' />
+      <source type='sheet' worksheet='Revenue Trend' />
+      <agg-type type='min' />
+      <clear-option type='assign-fixed-value' value='i:1' />
+      <params>
+        <param name='source-field' value='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' />
+        <param name='target-parameter' value='[Parameters].[AxisStart]' />
+      </params>
+    </edit-parameter-action>
+  </actions>
+  <worksheets>
+    <worksheet name='KPI- Achievement'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pharma_sales_data' name='federated.059jrgn1inh6l81a5facl08hfthw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.059jrgn1inh6l81a5facl08hfthw'>
+            <column caption='Average Achievement %' datatype='real' name='[Calculation_0195995792908290]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='AVG([achieved_pct])' />
+            </column>
+            <column caption='Achieved Pct' datatype='real' name='[achieved_pct]' role='measure' type='quantitative' />
+            <column caption='Medicine Name' datatype='string' name='[medicine_name]' role='dimension' type='nominal' />
+            <column-instance column='[medicine_name]' derivation='None' name='[none:medicine_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_0195995792908290]' derivation='User' name='[usr:Calculation_0195995792908290:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]'>
+            <groupfilter function='level-members' level='[region]' user:ui-action-filter='[Action2_06AAF77927284213BF4CB2F6C629AAC8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.059jrgn1inh6l81a5facl08hfthw].[usr:Calculation_0195995792908290:qk]' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.059jrgn1inh6l81a5facl08hfthw].[usr:Calculation_0195995792908290:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#d53644' fontname='Tableau Bold' fontsize='12'>Avg Achievement %</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#12820c' fontname='Tableau Bold' fontsize='22'><![CDATA[<[federated.059jrgn1inh6l81a5facl08hfthw].[usr:Calculation_0195995792908290:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2C1EFCA6-A1AD-4E47-8C66-E72FB158EA70}' />
+    </worksheet>
+    <worksheet name='KPI- ROI'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pharma_sales_data' name='federated.059jrgn1inh6l81a5facl08hfthw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.059jrgn1inh6l81a5facl08hfthw'>
+            <column caption='Average ROI' datatype='real' name='[Calculation_0195995794702339]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([revenue]) / SUM([marketing_spend])' />
+            </column>
+            <column caption='Marketing Spend' datatype='integer' name='[marketing_spend]' role='measure' type='quantitative' />
+            <column caption='Medicine Name' datatype='string' name='[medicine_name]' role='dimension' type='nominal' />
+            <column-instance column='[medicine_name]' derivation='None' name='[none:medicine_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column caption='Revenue' datatype='integer' name='[revenue]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0195995794702339]' derivation='User' name='[usr:Calculation_0195995794702339:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]'>
+            <groupfilter function='level-members' level='[region]' user:ui-action-filter='[Action2_06AAF77927284213BF4CB2F6C629AAC8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.059jrgn1inh6l81a5facl08hfthw].[usr:Calculation_0195995794702339:qk]' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.059jrgn1inh6l81a5facl08hfthw].[usr:Calculation_0195995794702339:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#d53644' fontname='Tableau Bold' fontsize='12'>Average ROI</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#12820c' fontname='Tableau Bold' fontsize='22'><![CDATA[<[federated.059jrgn1inh6l81a5facl08hfthw].[usr:Calculation_0195995794702339:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{3AF1E386-5CD5-4250-BD4E-8CA80E154878}' />
+    </worksheet>
+    <worksheet name='KPI-Total Prescription'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pharma_sales_data' name='federated.059jrgn1inh6l81a5facl08hfthw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.059jrgn1inh6l81a5facl08hfthw'>
+            <column caption='Total Prescription' datatype='integer' name='[Calculation_0195995791708161]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='sum([prescriptions])' />
+            </column>
+            <column caption='Medicine Name' datatype='string' name='[medicine_name]' role='dimension' type='nominal' />
+            <column-instance column='[medicine_name]' derivation='None' name='[none:medicine_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Prescriptions' datatype='integer' name='[prescriptions]' role='measure' type='quantitative' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_0195995791708161]' derivation='User' name='[usr:Calculation_0195995791708161:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]'>
+            <groupfilter function='level-members' level='[region]' user:ui-action-filter='[Action2_06AAF77927284213BF4CB2F6C629AAC8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.059jrgn1inh6l81a5facl08hfthw].[usr:Calculation_0195995791708161:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#d53644' fontname='Tableau Bold' fontsize='12'>Total Prescription</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#12820c' fontname='Tableau Bold' fontsize='22'><![CDATA[<[federated.059jrgn1inh6l81a5facl08hfthw].[usr:Calculation_0195995791708161:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{4CFADE4D-6A08-4A7F-87F8-D2DB62079B9C}' />
+    </worksheet>
+    <worksheet name='KPI-Total Revenue'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pharma_sales_data' name='federated.059jrgn1inh6l81a5facl08hfthw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.059jrgn1inh6l81a5facl08hfthw'>
+            <column caption='Total Revenue' datatype='integer' name='[Calculation_0195995790295040]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Sum([revenue])' />
+            </column>
+            <column caption='Medicine Name' datatype='string' name='[medicine_name]' role='dimension' type='nominal' />
+            <column-instance column='[medicine_name]' derivation='None' name='[none:medicine_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column caption='Revenue' datatype='integer' name='[revenue]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0195995790295040]' derivation='User' name='[usr:Calculation_0195995790295040:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]'>
+            <groupfilter function='level-members' level='[region]' user:ui-action-filter='[Action2_06AAF77927284213BF4CB2F6C629AAC8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.059jrgn1inh6l81a5facl08hfthw].[usr:Calculation_0195995790295040:qk]' value='c&quot;₹&quot;#,##0,,.00M;-&quot;₹&quot;#,##0,,.00M' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.059jrgn1inh6l81a5facl08hfthw].[usr:Calculation_0195995790295040:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontcolor='#d53644' fontname='Tableau Bold' fontsize='12'>Total Revenue</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#12820c' fontname='Tableau Bold' fontsize='22'><![CDATA[<[federated.059jrgn1inh6l81a5facl08hfthw].[usr:Calculation_0195995790295040:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{F1CC9AF5-8849-47B9-BBD6-10767AB77448}' />
+    </worksheet>
+    <worksheet name='Product Revenue Contribution'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#d53644' fontname='Tableau Bold' fontsize='12'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pharma_sales_data' name='federated.059jrgn1inh6l81a5facl08hfthw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.059jrgn1inh6l81a5facl08hfthw'>
+            <column caption='Doctor Name' datatype='string' name='[doctor_name]' role='dimension' type='nominal' />
+            <column caption='Medicine Name' datatype='string' name='[medicine_name]' role='dimension' type='nominal' />
+            <column-instance column='[doctor_name]' derivation='None' name='[none:doctor_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[medicine_name]' derivation='None' name='[none:medicine_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[revenue]' derivation='Sum' name='[pcto:sum:revenue:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column caption='Prescriptions' datatype='integer' name='[prescriptions]' role='measure' type='quantitative' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column caption='Revenue' datatype='integer' name='[revenue]' role='measure' type='quantitative' />
+            <column-instance column='[revenue]' derivation='Sum' name='[sum:revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]'>
+            <groupfilter function='level-members' level='[region]' user:ui-action-filter='[Action2_06AAF77927284213BF4CB2F6C629AAC8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:doctor_name:nk]' filter-group='5'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([prescriptions])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:doctor_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:doctor_name:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]' value='Tableau Semibold' />
+            <format attr='color' field='[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]' value='#000000' />
+            <format attr='font-size' field='[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]' value='12' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]' value='Medicine Name'>
+              <formatted-text>
+                <run fontcolor='#d53644' fontname='Tableau Bold' fontsize='12'>Medicine Name</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]' />
+              <wedge-size column='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' />
+              <text column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]' />
+              <text column='[federated.059jrgn1inh6l81a5facl08hfthw].[pcto:sum:revenue:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]</run>
+                <run>&gt;&#10;</run>
+                <run><![CDATA[<[federated.059jrgn1inh6l81a5facl08hfthw].[pcto:sum:revenue:qk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='1' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{123AC8FD-B670-4742-9A10-9A212A8F9FCB}' />
+    </worksheet>
+    <worksheet name='Revenue By Region'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#d53644' fontname='Tableau Bold' fontsize='12'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pharma_sales_data' name='federated.059jrgn1inh6l81a5facl08hfthw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.059jrgn1inh6l81a5facl08hfthw'>
+            <column caption='Total Revenue' datatype='integer' name='[Calculation_0195995790295040]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='Sum([revenue])' />
+            </column>
+            <column caption='Region Revenue' datatype='real' name='[Calculation_0195995804663812]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([revenue]) / TOTAL(SUM([revenue])) * 100'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column-instance column='[Calculation_0195995790295040]' derivation='User' name='[cum:usr:Calculation_0195995790295040:qk]' pivot='key' type='quantitative'>
+              <table-calc aggregation='Sum' ordering-type='Columns' type='CumTotal' />
+            </column-instance>
+            <column caption='Medicine Name' datatype='string' name='[medicine_name]' role='dimension' type='nominal' />
+            <column-instance column='[medicine_name]' derivation='None' name='[none:medicine_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column caption='Revenue' datatype='integer' name='[revenue]' role='measure' type='quantitative' />
+            <column-instance column='[revenue]' derivation='Sum' name='[sum:revenue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_0195995804663812]' derivation='User' name='[usr:Calculation_0195995804663812:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+          </datasource-dependencies>
+          <computed-sort column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]' direction='DESC' using='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' />
+          <slices>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' value='53' />
+            <format attr='tick-color' scope='cols' value='#00000000' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-family' field='[federated.059jrgn1inh6l81a5facl08hfthw].[cum:usr:Calculation_0195995790295040:qk]' value='Tableau Semibold' />
+            <format attr='font-size' field='[federated.059jrgn1inh6l81a5facl08hfthw].[cum:usr:Calculation_0195995790295040:qk]' value='8' />
+            <format attr='color' field='[federated.059jrgn1inh6l81a5facl08hfthw].[cum:usr:Calculation_0195995790295040:qk]' value='#666666' />
+            <format attr='text-format' field='[federated.059jrgn1inh6l81a5facl08hfthw].[cum:usr:Calculation_0195995790295040:qk]' value='n#,##0,,.00M;-#,##0,,.00M' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]' value='Tableau Semibold' />
+            <format attr='color' field='[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]' value='#000000' />
+            <format attr='font-family' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' value='Tableau Semibold' />
+            <format attr='font-size' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' value='8' />
+            <format attr='color' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' value='#000000' />
+            <format attr='font-size' field='[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]' value='8' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='stroke-size' scope='cols' value='0' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#faf4e7' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]' value='Region'>
+              <formatted-text>
+                <run fontcolor='#d53644' fontname='Tableau Bold' fontsize='12'>Region</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <text column='[federated.059jrgn1inh6l81a5facl08hfthw].[cum:usr:Calculation_0195995790295040:qk]' />
+              <text column='[federated.059jrgn1inh6l81a5facl08hfthw].[usr:Calculation_0195995804663812:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.059jrgn1inh6l81a5facl08hfthw].[cum:usr:Calculation_0195995790295040:qk]</run>
+                <run>&gt;&#10;&lt;</run>
+                <run>[federated.059jrgn1inh6l81a5facl08hfthw].[usr:Calculation_0195995804663812:qk]</run>
+                <run>&gt; %</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='auto' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#8cd17d' />
+                <format attr='mark-transparency' value='193' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]</rows>
+        <cols>[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]</cols>
+      </table>
+      <simple-id uuid='{D39A90BE-D038-4C8D-85A0-805365258878}' />
+    </worksheet>
+    <worksheet name='Revenue Trend'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Monthly Revenue Trend&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pharma_sales_data' name='federated.059jrgn1inh6l81a5facl08hfthw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.059jrgn1inh6l81a5facl08hfthw'>
+            <column caption='Achieved Pct' datatype='real' name='[achieved_pct]' role='measure' type='quantitative' />
+            <column caption='Doctor Name' datatype='string' name='[doctor_name]' role='dimension' type='nominal' />
+            <column caption='Medicine Name' datatype='string' name='[medicine_name]' role='dimension' type='nominal' />
+            <column-instance column='[visit_date]' derivation='Month' name='[mn:visit_date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[doctor_name]' derivation='None' name='[none:doctor_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[medicine_name]' derivation='None' name='[none:medicine_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[sales_rep_name]' derivation='None' name='[none:sales_rep_name:nk]' pivot='key' type='nominal' />
+            <column caption='Prescriptions' datatype='integer' name='[prescriptions]' role='measure' type='quantitative' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column caption='Revenue' datatype='integer' name='[revenue]' role='measure' type='quantitative' />
+            <column caption='Sales Rep Name' datatype='string' name='[sales_rep_name]' role='dimension' type='nominal' />
+            <column-instance column='[revenue]' derivation='Sum' name='[sum:revenue:qk]' pivot='key' type='quantitative' />
+            <column caption='Visit Date' datatype='date' name='[visit_date]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:doctor_name:nk]'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([prescriptions])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:doctor_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:sales_rep_name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([achieved_pct])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:sales_rep_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:sales_rep_name:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:doctor_name:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' field-type='quantitative' min='24043889' range-type='fixedmin' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.059jrgn1inh6l81a5facl08hfthw].[mn:visit_date:qk]' field-type='quantitative' max='12' min='1' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-family' field='[federated.059jrgn1inh6l81a5facl08hfthw].[mn:visit_date:qk]' value='Tableau Semibold' />
+            <format attr='font-size' field='[federated.059jrgn1inh6l81a5facl08hfthw].[mn:visit_date:qk]' value='8' />
+            <format attr='color' field='[federated.059jrgn1inh6l81a5facl08hfthw].[mn:visit_date:qk]' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#8cd17d' />
+                <format attr='mark-transparency' value='193' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]</rows>
+        <cols>[federated.059jrgn1inh6l81a5facl08hfthw].[mn:visit_date:qk]</cols>
+      </table>
+      <simple-id uuid='{F2BF9F48-6813-4F24-9E5C-4D98F11AE2B4}' />
+    </worksheet>
+    <worksheet name='Revenue vs Marketing Spend'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#d53644' fontname='Tableau Bold' fontsize='12'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pharma_sales_data' name='federated.059jrgn1inh6l81a5facl08hfthw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.059jrgn1inh6l81a5facl08hfthw'>
+            <column caption='Marketing Spend' datatype='integer' name='[marketing_spend]' role='measure' type='quantitative' />
+            <column caption='Medicine Name' datatype='string' name='[medicine_name]' role='dimension' type='nominal' />
+            <column-instance column='[medicine_name]' derivation='None' name='[none:medicine_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Prescriptions' datatype='integer' name='[prescriptions]' role='measure' type='quantitative' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column caption='Revenue' datatype='integer' name='[revenue]' role='measure' type='quantitative' />
+            <column-instance column='[marketing_spend]' derivation='Sum' name='[sum:marketing_spend:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[prescriptions]' derivation='Sum' name='[sum:prescriptions:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[revenue]' derivation='Sum' name='[sum:revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]'>
+            <groupfilter function='level-members' level='[region]' user:ui-action-filter='[Action2_06AAF77927284213BF4CB2F6C629AAC8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' field-type='quantitative' min='90000000' range-type='fixedmin' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:marketing_spend:qk]' field-type='quantitative' max='12717217' min='9000000' range-type='fixed' scope='cols' type='space' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+            <format attr='title' class='0' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' scope='rows' value='Revenue' />
+            <format attr='auto-subtitle' class='0' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' scope='rows' value='true' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-width' scope='rows' value='0' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' scope='rows' value='0' />
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:marketing_spend:qk]' value='c&quot;₹&quot;#,##0,,.00M;-&quot;₹&quot;#,##0,,.00M' />
+            <format attr='text-format' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' value='n#,##0,,.00M;-#,##0,,.00M' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' palette='green_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' scope='rows' value='0' />
+            <format attr='border-style' data-class='total' scope='rows' value='none' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' />
+              <size column='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:prescriptions:qk]' />
+              <text column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]' />
+              <lod column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575'>Region:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Revenue:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Marketing Spend:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.059jrgn1inh6l81a5facl08hfthw].[sum:marketing_spend:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Prescriptions:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.059jrgn1inh6l81a5facl08hfthw].[sum:prescriptions:qk]>]]></run>
+                <run>Æ&#10;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]</rows>
+        <cols>[federated.059jrgn1inh6l81a5facl08hfthw].[sum:marketing_spend:qk]</cols>
+      </table>
+      <simple-id uuid='{245E6352-463C-4C63-B971-FBCEE99CDDCE}' />
+    </worksheet>
+    <worksheet name='Sales Rep Performance'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#d53644' fontname='Tableau Bold' fontsize='12'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pharma_sales_data' name='federated.059jrgn1inh6l81a5facl08hfthw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.059jrgn1inh6l81a5facl08hfthw'>
+            <column caption='Achieved Pct' datatype='real' name='[achieved_pct]' role='measure' type='quantitative' />
+            <column caption='Doctor Name' datatype='string' name='[doctor_name]' role='dimension' type='nominal' />
+            <column caption='Medicine Name' datatype='string' name='[medicine_name]' role='dimension' type='nominal' />
+            <column-instance column='[doctor_name]' derivation='None' name='[none:doctor_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[medicine_name]' derivation='None' name='[none:medicine_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[sales_rep_name]' derivation='None' name='[none:sales_rep_name:nk]' pivot='key' type='nominal' />
+            <column caption='Prescriptions' datatype='integer' name='[prescriptions]' role='measure' type='quantitative' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column caption='Revenue' datatype='integer' name='[revenue]' role='measure' type='quantitative' />
+            <column caption='Sales Rep Name' datatype='string' name='[sales_rep_name]' role='dimension' type='nominal' />
+            <column-instance column='[achieved_pct]' derivation='Sum' name='[sum:achieved_pct:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[revenue]' derivation='Sum' name='[sum:revenue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]'>
+            <groupfilter function='level-members' level='[region]' user:ui-action-filter='[Action2_06AAF77927284213BF4CB2F6C629AAC8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:doctor_name:nk]' filter-group='5'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([prescriptions])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:doctor_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:sales_rep_name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([achieved_pct])' function='order' user:ui-marker='order'>
+                <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;Allison Wood&quot;' />
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;Daniel Thompson&quot;' />
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;Diane Cruz&quot;' />
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;Jessica Vaughn&quot;' />
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;Joanna Smith&quot;' />
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;Jordan Adams&quot;' />
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;Joseph Schroeder&quot;' />
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;Justin Hays&quot;' />
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;Krystal Reese&quot;' />
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;Megan Terry&quot;' />
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;Michael Williams&quot;' />
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;Michelle Francis&quot;' />
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;Robert Pace&quot;' />
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;Ruth Holmes&quot;' />
+                  <groupfilter function='member' level='[none:sales_rep_name:nk]' member='&quot;William Levy&quot;' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:sales_rep_name:nk]' direction='DESC' using='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' />
+          <slices>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:sales_rep_name:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:doctor_name:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' value='c&quot;₹&quot;#,##0,,.00M;-&quot;₹&quot;#,##0,,.00M' />
+            <format attr='border-width' value='0' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:achieved_pct:qk]' palette='green_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='stroke-size' scope='rows' value='0' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#faf4e7' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.059jrgn1inh6l81a5facl08hfthw].[none:sales_rep_name:nk]' value='Sales Rep Name'>
+              <formatted-text>
+                <run fontcolor='#d53644' fontname='Tableau Bold' fontsize='12'>Sales Rep Name</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:achieved_pct:qk]' />
+              <text column='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.059jrgn1inh6l81a5facl08hfthw].[none:sales_rep_name:nk]</rows>
+        <cols>[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]</cols>
+      </table>
+      <simple-id uuid='{077FB651-30DC-4121-B44C-23092C11D730}' />
+    </worksheet>
+    <worksheet name='Top Physicians'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontcolor='#d53644' fontname='Tableau Bold' fontsize='12'>Top 5 Physicians</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='pharma_sales_data' name='federated.059jrgn1inh6l81a5facl08hfthw' />
+          </datasources>
+          <datasource-dependencies datasource='federated.059jrgn1inh6l81a5facl08hfthw'>
+            <column caption='Doctor Name' datatype='string' name='[doctor_name]' role='dimension' type='nominal' />
+            <column caption='Medicine Name' datatype='string' name='[medicine_name]' role='dimension' type='nominal' />
+            <column-instance column='[doctor_name]' derivation='None' name='[none:doctor_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[medicine_name]' derivation='None' name='[none:medicine_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Prescriptions' datatype='integer' name='[prescriptions]' role='measure' type='quantitative' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column-instance column='[prescriptions]' derivation='Sum' name='[sum:prescriptions:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]'>
+            <groupfilter function='level-members' level='[region]' user:ui-action-filter='[Action2_06AAF77927284213BF4CB2F6C629AAC8]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:doctor_name:nk]' filter-group='5'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([prescriptions])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:doctor_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <computed-sort column='[federated.059jrgn1inh6l81a5facl08hfthw].[none:doctor_name:nk]' direction='DESC' using='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:prescriptions:qk]' />
+          <slices>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:doctor_name:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[Action (Region)]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]</column>
+            <column>[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='tick-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:prescriptions:qk]' palette='green_10_0' type='interpolated' />
+          </style-rule>
+          <style-rule element='dropline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.059jrgn1inh6l81a5facl08hfthw].[none:doctor_name:nk]' value='Doctor Name'>
+              <formatted-text>
+                <run fontcolor='#d53644' fontname='Tableau Bold' fontsize='12'>Doctor Name</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:prescriptions:qk]' />
+              <text column='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:prescriptions:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.5052486658096313' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-size' value='0' />
+                <format attr='line-visibility' value='off' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.059jrgn1inh6l81a5facl08hfthw].[none:doctor_name:nk]</rows>
+        <cols>[federated.059jrgn1inh6l81a5facl08hfthw].[sum:prescriptions:qk]</cols>
+      </table>
+      <simple-id uuid='{77B397E5-4C75-42D1-8A33-AAAEA45B96D6}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Tableau Bold' fontsize='22'>PHARMA SALES FORCE EFFECTIVENESS ANALYTICS </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='1900' maxwidth='1600' minheight='900' minwidth='1380' sizing-mode='range' />
+      <datasources>
+        <datasource caption='pharma_sales_data' name='federated.059jrgn1inh6l81a5facl08hfthw' />
+      </datasources>
+      <datasource-dependencies datasource='federated.059jrgn1inh6l81a5facl08hfthw'>
+        <column caption='Doctor Name' datatype='string' name='[doctor_name]' role='dimension' type='nominal' />
+        <column caption='Medicine Name' datatype='string' name='[medicine_name]' role='dimension' type='nominal' />
+        <column-instance column='[doctor_name]' derivation='None' name='[none:doctor_name:nk]' pivot='key' type='nominal' />
+        <column-instance column='[medicine_name]' derivation='None' name='[none:medicine_name:nk]' pivot='key' type='nominal' />
+        <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+        <column-instance column='[sales_rep_name]' derivation='None' name='[none:sales_rep_name:nk]' pivot='key' type='nominal' />
+        <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+        <column caption='Sales Rep Name' datatype='string' name='[sales_rep_name]' role='dimension' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='94165' id='5' param='vert' type-v2='layout-flow' w='85918' x='13537' y='5000'>
+            <zone fixed-size='93' h='9708' id='8' is-fixed='true' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='85918' x='13537' y='5000'>
+              <zone h='9708' id='12' name='KPI-Total Revenue' show-title='false' w='21511' x='13547' y='5010'>
+                <layout-cache fixed-size-h='62' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='6' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+              <zone h='9708' id='11' name='KPI-Total Prescription' show-title='false' w='21511' x='35058' y='5010'>
+                <layout-cache fixed-size-h='62' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='6' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+              <zone h='9708' id='10' name='KPI- Achievement' show-title='false' w='21443' x='56569' y='5010'>
+                <layout-cache fixed-size-h='62' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='6' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+              <zone h='9708' id='9' name='KPI- ROI' show-title='false' w='21443' x='78012' y='5010'>
+                <layout-cache fixed-size-h='62' fixed-size-w='120' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='6' />
+                  <format attr='background-color' value='#ffffff' />
+                </zone-style>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='background-color' value='#e6e6e681' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='94165' id='14' param='vert' type-v2='layout-flow' w='12992' x='545' y='5000'>
+            <zone h='14405' id='40' name='Revenue By Region' param='[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]' type-v2='filter' values='database' w='12720' x='681' y='5209'>
+              <zone-style>
+                <format attr='border-color' value='#555555' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='1' />
+                <format attr='margin' value='6' />
+                <format attr='background-color' value='#faf4e7ce' />
+              </zone-style>
+            </zone>
+            <zone h='14405' id='39' name='Product Revenue Contribution' param='[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]' type-v2='filter' values='database' w='12720' x='681' y='19614'>
+              <zone-style>
+                <format attr='border-color' value='#555555' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='1' />
+                <format attr='margin' value='6' />
+                <format attr='background-color' value='#faf4e7ce' />
+              </zone-style>
+            </zone>
+            <zone h='32468' id='41' name='Sales Rep Performance' param='[federated.059jrgn1inh6l81a5facl08hfthw].[none:sales_rep_name:nk]' type-v2='filter' values='database' w='12720' x='681' y='34019'>
+              <zone-style>
+                <format attr='border-color' value='#555555' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='1' />
+                <format attr='margin' value='6' />
+                <format attr='background-color' value='#faf4e7ce' />
+              </zone-style>
+            </zone>
+            <zone h='32469' id='42' name='Top Physicians' param='[federated.059jrgn1inh6l81a5facl08hfthw].[none:doctor_name:nk]' show-mode='false' type-v2='filter' values='database' w='12720' x='681' y='66487'>
+              <zone-style>
+                <format attr='border-color' value='#555555' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='1' />
+                <format attr='margin' value='6' />
+                <format attr='background-color' value='#faf4e7ce' />
+              </zone-style>
+            </zone>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='2' />
+              <format attr='background-color' value='#c9fbb19b' />
+            </zone-style>
+          </zone>
+          <zone fixed-size='49' h='4165' id='7' is-fixed='true' type-v2='title' w='98910' x='545' y='835'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='2' />
+              <format attr='background-color' value='#c9fbb19b' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='35282' id='18' param='horz' type-v2='layout-flow' w='42818' x='56978' y='14927'>
+          <zone h='35282' id='19' name='Sales Rep Performance' w='42818' x='56978' y='14927'>
+            <layout-cache minwidth='220' type-h='cell' type-w='scalable' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='6' />
+              <format attr='background-color' value='#e6e6e681' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='35073' id='20' param='horz' type-v2='layout-flow' w='43159' x='13615' y='15031'>
+          <zone h='35073' id='21' name='Revenue By Region' w='43159' x='13615' y='15031'>
+            <layout-cache minwidth='180' type-h='cell' type-w='scalable' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='6' />
+              <format attr='background-color' value='#e6e6e681' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone h='21086' id='26' param='horz' type-v2='layout-flow' w='43091' x='56978' y='50522'>
+          <zone h='21086' id='27' name='Product Revenue Contribution' w='43091' x='56978' y='50522'>
+            <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#faf4e7' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='37683' id='29' param='horz' type-v2='layout-flow' w='43227' x='13615' y='50313'>
+          <zone h='37683' id='30' name='Revenue vs Marketing Spend' w='43227' x='13615' y='50313'>
+            <layout-cache has-max-size-h='true' maxheight='38' minheight='38' minwidth='188' type-h='scalable' type-w='scalable' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#faf4e7' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone h='28392' id='33' param='horz' type-v2='layout-flow' w='42886' x='56978' y='71608'>
+          <zone h='28392' id='34' name='Top Physicians' w='42886' x='56978' y='71608'>
+            <layout-cache minwidth='220' type-h='cell' type-w='scalable' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#faf4e7' />
+            </zone-style>
+          </zone>
+        </zone>
+        <zone forceUpdate='true' h='11065' id='36' type-v2='text' w='43227' x='13547' y='88100'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Tableau Bold' fontsize='10' underline='true'>Key Business Insights</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Songti TC' fontsize='10'>• South region generated the highest revenue (₹115.1M), demonstrating strong territory performance.</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Songti TC' fontsize='10'>• North region achieved the highest ROI (10.22), indicating efficient utilization of marketing investments.</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Songti TC' fontsize='10'>• HeartSafe emerged as the leading product, while Roy Newman recorded the highest prescription volume among all physicians.</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run fontname='Tableau Bold' fontsize='22'>PHARMA SALES FORCE EFFECTIVENESS ANALYTICS </run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='2500' minheight='2500' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='46' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98432' id='45' param='vert' type-v2='layout-flow' w='99000' x='500' y='784'>
+                <zone fixed-size='49' h='4170' id='7' type-v2='title' w='99000' x='500' y='784'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#c9fbb19b' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='161' h='9118' id='12' is-fixed='true' name='KPI-Total Revenue' show-title='false' w='21500' x='13500' y='5000'>
+                  <layout-cache fixed-size-h='62' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='161' h='9118' id='11' is-fixed='true' name='KPI-Total Prescription' show-title='false' w='21500' x='35000' y='5000'>
+                  <layout-cache fixed-size-h='62' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='161' h='9118' id='10' is-fixed='true' name='KPI- Achievement' show-title='false' w='21500' x='56500' y='5000'>
+                  <layout-cache fixed-size-h='62' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='161' h='9118' id='9' is-fixed='true' name='KPI- ROI' show-title='false' w='21500' x='78000' y='5000'>
+                  <layout-cache fixed-size-h='62' fixed-size-w='120' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone h='33406' id='41' mode='checkdropdown' name='Sales Rep Performance' param='[federated.059jrgn1inh6l81a5facl08hfthw].[none:sales_rep_name:nk]' type-v2='filter' values='database' w='12754' x='625' y='32208'>
+                  <zone-style>
+                    <format attr='border-color' value='#555555' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#faf4e7ce' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35282' id='19' is-fixed='true' name='Sales Rep Performance' w='42818' x='56978' y='14927'>
+                  <layout-cache minwidth='220' type-h='cell' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#e6e6e681' />
+                  </zone-style>
+                </zone>
+                <zone h='13529' id='40' mode='checkdropdown' name='Revenue By Region' param='[federated.059jrgn1inh6l81a5facl08hfthw].[none:region:nk]' type-v2='filter' values='database' w='12754' x='625' y='5150'>
+                  <zone-style>
+                    <format attr='border-color' value='#555555' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#faf4e7ce' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='35073' id='21' is-fixed='true' name='Revenue By Region' w='43159' x='13615' y='15031'>
+                  <layout-cache minwidth='180' type-h='cell' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#e6e6e681' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37683' id='30' is-fixed='true' name='Revenue vs Marketing Spend' w='43227' x='13615' y='50313'>
+                  <layout-cache has-max-size-h='true' maxheight='38' minheight='38' minwidth='188' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#faf4e7' />
+                  </zone-style>
+                </zone>
+                <zone h='13529' id='39' mode='checkdropdown' name='Product Revenue Contribution' param='[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]' type-v2='filter' values='database' w='12754' x='625' y='18679'>
+                  <zone-style>
+                    <format attr='border-color' value='#555555' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#faf4e7ce' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='21086' id='27' is-fixed='true' name='Product Revenue Contribution' w='43091' x='56978' y='50522'>
+                  <layout-cache cell-count-w='1' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#faf4e7' />
+                  </zone-style>
+                </zone>
+                <zone h='33406' id='42' mode='checkdropdown' name='Top Physicians' param='[federated.059jrgn1inh6l81a5facl08hfthw].[none:doctor_name:nk]' show-mode='false' type-v2='filter' values='database' w='12754' x='625' y='65614'>
+                  <zone-style>
+                    <format attr='border-color' value='#555555' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#faf4e7ce' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='28392' id='34' is-fixed='true' name='Top Physicians' w='42886' x='56978' y='71608'>
+                  <layout-cache minwidth='220' type-h='cell' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#faf4e7' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='11065' id='36' type-v2='text' w='43227' x='13547' y='88100'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontname='Tableau Bold' fontsize='10' underline='true'>Key Business Insights</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Songti TC' fontsize='10'>• South region generated the highest revenue (₹115.1M), demonstrating strong territory performance.</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Songti TC' fontsize='10'>• North region achieved the highest ROI (10.22), indicating efficient utilization of marketing investments.</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Songti TC' fontsize='10'>• HeartSafe emerged as the leading product, while Roy Newman recorded the highest prescription volume among all physicians.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{09C04B84-3A43-4A7D-9FFE-35DDF0C0431F}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='KPI-Total Revenue'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C8DC98F4-D0E4-48A1-8393-E1218CE1628B}' />
+    </window>
+    <window class='worksheet' name='KPI-Total Prescription'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{79944D9B-2816-4A5D-B7B3-560E8A82A531}' />
+    </window>
+    <window class='worksheet' name='KPI- Achievement'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A3D2419E-9130-454E-B831-D6BD6F0619C0}' />
+    </window>
+    <window class='worksheet' name='KPI- ROI'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{808A894F-18BF-4C50-96DA-AA9ED14BAFA6}' />
+    </window>
+    <window class='worksheet' name='Revenue By Region'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{7ED52ECA-900E-4FE8-AAA4-799CE11B2F7B}' />
+    </window>
+    <window class='worksheet' name='Revenue Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{9BEB3CC4-665C-49A4-97FE-1D358D3C09AE}' />
+    </window>
+    <window class='worksheet' name='Product Revenue Contribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.059jrgn1inh6l81a5facl08hfthw].[none:medicine_name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{3D7F9963-0879-4E0A-AA83-A664A865DA01}' />
+    </window>
+    <window class='worksheet' name='Top Physicians'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.059jrgn1inh6l81a5facl08hfthw].[none:doctor_name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:prescriptions:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DF6DB123-DC2D-4BCE-B301-9BB15C7CC350}' />
+    </window>
+    <window class='worksheet' name='Revenue vs Marketing Spend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:prescriptions:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:revenue:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2A099460-652B-4151-B784-2019D37E8778}' />
+    </window>
+    <window class='worksheet' name='Sales Rep Performance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.059jrgn1inh6l81a5facl08hfthw].[none:sales_rep_name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.059jrgn1inh6l81a5facl08hfthw].[sum:achieved_pct:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5BD2D27A-92E8-4153-B477-D60DF85BC612}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='KPI- Achievement'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='KPI- ROI'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='KPI-Total Prescription'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='KPI-Total Revenue'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='Product Revenue Contribution'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Revenue By Region'>
+          <zoom type='fit-height' />
+        </viewpoint>
+        <viewpoint name='Revenue vs Marketing Spend'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sales Rep Performance'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top Physicians'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='21' />
+      <simple-id uuid='{C5486D16-FB16-45AF-8804-2C0F30302782}' />
+    </window>
+  </windows>
+</workbook>
