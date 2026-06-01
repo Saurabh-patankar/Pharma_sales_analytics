@@ -15,7 +15,9 @@ The project was developed using SQL, Python (Pandas), and Tableau following a co
 Pharmaceutical companies invest heavily in sales representatives and marketing activities to increase physician prescriptions and product sales. However, management often faces challenges in identifying:
 
 * Which regions generate the highest revenue?
-* Which products contribute most to sales?
+* Which products contribute most to sales?<img width="1680" height="1050" alt="Screenshot 2026-06-01 at 3 46 14 PM" src="https://github.com/user-attachments/assets/da306876-a6d5-4330-90fd-63fadf375d6f" />
+[Uploading Dashboard copy.twb…]()
+
 * Which physicians drive prescription growth?
 * How effective are sales representatives?
 * Is marketing spend generating adequate returns?
